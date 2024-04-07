@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-TARGET=$(rustup default | awk '{sub(/[^-]*-/); print $1}')
+TARGET=$(rustup default | awk '{sub(/[^-]*-/,""); print $1}')
 
 RUSTFLAGS="-C target-cpu=native -C link-args=-Wl,-no-pie,-build-id=none,--no-eh-frame-hdr,--gc-sections,-s" cargo build \
 --release \
