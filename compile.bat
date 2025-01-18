@@ -5,4 +5,4 @@ cargo build ^
 -Z build-std-features=panic_immediate_abort ^
 -Z unstable-options ^
 --target x86_64-pc-windows-msvc ^
---out-dir build
+--artifact-dir build

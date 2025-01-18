@@ -9,4 +9,4 @@ RUSTFLAGS="-C target-cpu=native -C link-args=-Wl,-no-pie,-build-id=none,--no-eh-
 -Z build-std-features=panic_immediate_abort \
 -Z unstable-options \
 --target "$TARGET" \
---out-dir build
+--artifact-dir build
